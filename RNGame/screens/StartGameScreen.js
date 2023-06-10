@@ -3,29 +3,40 @@ import PrimaryButton from '../components/PrimaryButton';
 
 const StartGameScreen = () => {
     return (
-    <View style={styles.inputContainer}>
-      <TextInput />
-      <PrimaryButton>Reset</PrimaryButton>
-      <PrimaryButton>Confirm</PrimaryButton>
-    </View>
-  )
+      <View style={styles.inputContainer}>
+        <TextInput style={styles.numberInput} maxLength={2} />
+        <PrimaryButton>Reset</PrimaryButton>
+        <PrimaryButton>Confirm</PrimaryButton>
+      </View>
+    );
 }
 
 export default StartGameScreen;
 
 const styles = StyleSheet.create({
   inputContainer: {
-    marginHorizontal: 20,
+    backgroundColor: '#72063c',
     borderRadius: 8,
-    padding: 16,
-    marginTop: 100,
-    backgroundColor: "#72063c",
-    //add shadow android
+    //add shadow andorid
     elevation: 4,
+    marginHorizontal: 20,
+    marginTop: 100,
+    padding: 16,
     //add shadow ios
-    shadowColor: "black",
+    shadowColor: 'black',
     shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 6,
     shadowOpacity: 0.26,
-  }
+    shadowRadius: 6,
+  },
+  numberInput: {
+    borderBottomColor: '#ddb52f',
+    borderBottomWidth: 2,
+    color: '#ddb52f',
+    fontSize: 32,
+    width: 50,
+    fontWeight: 'bold',
+    height: 50,
+    marginVertical: 8,
+    textAlign: 'center',
+  },
 });
